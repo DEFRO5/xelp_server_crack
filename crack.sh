@@ -3,7 +3,7 @@
 # The script assumes Plex Media Server is currently running, that you have a mounted `/config` volume in the container, and that your container is named `plex`.
 # If your container is named differently or if your external volume is mounted elsewhere, change it at the top of the script instead of running it piped from curl.
 
-PLEX_CONFIG_DIR=/mnt/My pool/Plex/config
+PLEX_CONFIG_DIR="/mnt/My pool/Plex/config"
 PLEX_CONTAINER_NAME=ix-plex-plex-1
 PLEX_MEDIA_SERVER_DIR=$(ps aux | grep 'Plex Media Server' | grep -v grep | awk '{print $11}' | xargs dirname | uniq)
 
